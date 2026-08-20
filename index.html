@@ -3,82 +3,346 @@
 
 <head>
     <title>Brent's Toy Collection</title>
-    <style>
-    body{
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.6;
-            color: #333333;
-            background-color: #fff9bb;
-            text-align: center;
-            text-shadow: 1px 1px 2px #ffffff;
-    }
-    header {
-            border-bottom: 3px solid #2e5c8a;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-    }
-    h1 {
-            color: #000000;
-            font-size: 50px;
-            text-shadow: 2px 2px 4px #ebe8e7;
-            margin-bottom: 5px;
-    }
-    h2 {
-            color: #ff6a00;
-            text-shadow: 1px 1px 2px #ebe8e7;
-            margin-top: 30px;
-    }
-    img {
-        display: block;
-        margin: 20px auto;
-        border: 5px solid black;
-    }
 
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4ead5;
+            color: #222;
+        }
+
+        /*HEADER*/
+        header {
+            background: #171717;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 8px solid #ff5c00;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            color: #ff5c00;
+            font-size: 18px;
+            letter-spacing: 25px;
+            opacity: 0.7;
+        }
+        header h1 {
+            font-size: 58px;
+            margin: 10px 0;
+            color: #ff5c00;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow:
+                4px 4px 0px #ffffff,
+                7px 7px 0px #000000;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        header h1:hover {
+            transform: scale(1.05) rotate(-1deg);
+            text-shadow:
+                4px 4px 0px #ffffff,
+                7px 7px 0px #000000,
+                0 0 25px #ff5c00;
+        }
+        header p {
+            font-size: 18px;
+            color: #f5f5f5;
+            letter-spacing: 1px;
+        }
+
+
+        /*MAIN CONTENT*/
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            display: inline-block;
+            background: #ff5c00;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 6px 6px 0px #171717;
+            transition: 0.3s;
+        }
+        .section-title h2:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 10px 0px #171717;
+        }
+
+
+        /*TOY GRID*/
+        .toy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        /* TOY CARD*/
+        .toy-card {
+            background: white;
+            padding: 20px;
+            border-radius: 18px;
+            border: 4px solid #171717;
+            box-shadow: 8px 8px 0px #ff5c00;
+            transition: 0.35s;
+            position: relative;
+        }
+
+        /* Small collectible badge */
+        .toy-card::before {
+            content: "COLLECTIBLE";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #171717;
+            color: white;
+            padding: 6px 10px;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            letter-spacing: 1px;
+        }
+
+        /* CARD HOVER */
+        .toy-card:hover {
+            transform: translateY(-10px) rotate(-1deg);
+            box-shadow:
+                12px 15px 0px #ff5c00,
+                0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        /*TOY TITLES*/
+        .toy-card h3 {
+            color: #ff5c00;
+            font-size: 22px;
+            margin: 15px 0;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .toy-card:hover h3 {
+            color: #171717;
+            text-shadow:
+                0 0 5px #ff5c00,
+                0 0 10px #ff5c00;
+        }
+
+
+        /*TOY IMAGES */
+        .toy-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #171717;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .toy-card:hover img {
+            transform: scale(1.03);
+            border-color: #ff5c00;
+            box-shadow:
+                0 0 10px #ff5c00,
+                0 0 20px rgba(255, 92, 0, 0.5);
+        }
+
+        /*DESCRIPTION*/
+        .intro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        .highlight {
+            color: #ff5c00;
+            font-weight: bold;
+        }
+
+
+        /*BOTTOM MESSAGE*/
+        .bottom-message {
+            margin-top: 60px;
+            background: #171717;
+            color: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 20px;
+            border: 5px solid #ff5c00;
+            box-shadow: 10px 10px 0px #ff5c00;
+        }
+
+        .bottom-message h2 {
+            color: #ff5c00;
+            font-size: 30px;
+            margin-top: 0;
+        }
+        .bottom-message p {
+            font-size: 17px;
+        }
+
+
+        /*FOOTER*/
+        footer {
+            margin-top: 70px;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        footer span {
+            color: #ff5c00;
+            font-weight: bold;
+        }
+
+        /*MOBILE*/
+        @media (max-width: 750px) {
+
+            header h1 {
+                font-size: 40px;
+            }
+            .toy-grid {
+                grid-template-columns: 1fr;
+            }
+            .toy-card img {
+                height: 250px;
+            }
+        }
+
+        <!--NAVIGATION LINKS-->
+        nav {
+            margin-top: 25px;
+        }
+        nav a {
+            display: inline-block;
+            background-color: #ff5c00;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid white;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: white;
+            color: #ff5c00;
+            border-color: #ff5c00;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px #ff5c00;
+        }
     </style>
 </head>
 
+
 <body>
+    <!--HEADER-->
+    <header>
+        <h1>Brent's Toy Collection</h1>
+        <p>
+            Your Next Favorite Find.
+            <br>
+            Rare • Unique • Collectible
+        </p>
+    </header>
 
-    <h1>Brent's Toy Collection</h1>
-    <p>Your Next Favorite Find. Showcasing Rare and Unique Toys!</p>
 
-    <section>
-        <h2>Brent Delgado</h2>
-        <p> 20 Years old, Male, TUP Manila Student </p>
-        <img src="brentdelgado.jpg" alt="brent delgado" width="300" height="300">
-        <p style="text-align: justify;">
-           I am a Brent Delgado, a toy collector and enthusiast. I am only 20 years old, but my love for collecting
-           rare and unique toy pieces had been a passion of mine since i was a little kid. I want to share my collection 
-           with the public, to showcase the beauty, art, and story behind each toy. I hope to inspire others to start
-           their own toy collections or find a hobby in my shop. A toy is truly a mans best friend. That's is the message
-           i want to spread around the globe. 
+    <!--MAIN-->
+    <main>
+        <div class="section-title">
+            <h2> The Collection </h2>
+        </div>
 
+        <p class="intro">
+            Welcome to <span class="highlight">Brent's Toy Collection</span> —
+            a place for collectors, fans, and anyone who simply loves cool toys.
+            From wrestling figures to anime collectibles, there's always
+            something worth adding to the collection.
         </p>
 
-        <img src="toycollection.jpg" alt="toy collection" width="500" height="300">
+        <!-- NAVIGATION LINKS-->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-    </section>
+        <!-- TOY GRID FOR COLLECTIBLES -->
+        <section class="toy-grid">
 
-    <section>
-        <h3> Products Available</h3>
-        <p style="color: #ff6a00;"> <strong> WWE Action Figures, Trading Cards, And More!</strong></p>
-        <img src="wweactionfigures.jpg" alt="wwe action figures" width="500" height="300">
+            <!-- WWE -->
+            <div class="toy-card">
+                <h3>WWE Action Figures</h3>
+                <img src="wweactionfigures.jpg"
+                     alt="WWE action figures">
+            </div>
 
-        <p style="color: #ff6a00;"><strong>Anime, Cartoon, And Vintage Toys</strong></p>
-        <img src="animecartoontoys.jpg" alt="anime cartoon toys" width="500" height="300">
+            <!-- ANIME -->
+            <div class="toy-card">
+                <h3>Anime & Vintage Toys</h3>
+                <img src="animecartoontoys.jpg"
+                     alt="Anime, cartoon and vintage toys">
+            </div>
 
-        <p style="color: #ff6a00;"><strong>Sports Memorabilia</strong></p>
-        <img src="sportsmemorabilia.png" alt="sports memorabilia" width="500" height="300">
+            <!-- SPORTS -->
+            <div class="toy-card">
+                <h3>Sports Memorabilia</h3>
+                <img src="sportsmemorabilia.png"
+                     alt="Sports memorabilia">
+            </div>
 
-        <p style="color: #ff6a00;"><strong>Funko Pop! Figures</strong></p>
-        <img src="funkopopfigures.jpg" alt="funko pop! figures" width="500" height="300">
+            <!-- FUNKO POP FIGURES -->
+            <div class="toy-card">
+                <h3>Funko Pop! Figures</h3>
+                <img src="funkopopfigures.jpg"
+                     alt="Funko Pop figures">
+            </div>
 
-        <p style="color: #ff6a00;"><strong>And so much more here in Brent's Toy Collection! We have something for everyone!</strong></p>
-    </section>
+        </section>
 
+        <!-- BOTTOM MESSAGE -->
+        <div class="bottom-message">
+            <h2> Something for Every Collector</h2>
+            <p>
+                And so much more here at Brent's Toy Collection!
+                Whether you're a serious collector or just looking
+                for your next favorite toy, we've got something for you.
+            </p>
+
+        </div>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>
+            © 2026 <span>Brent's Toy Collection</span>
+            • Built for Toy Lovers
+        </p>
+    </footer>
 </body>
-
 </html>
