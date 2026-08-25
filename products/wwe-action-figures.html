@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>WWE Action Figures | Brent's Toy Collection</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4ead5;
+            color: #222;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: #171717;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            border-bottom: 8px solid #ff5c00;
+        }
+
+        header h1 {
+            color: #ff5c00;
+            font-size: 42px;
+            margin: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow:
+                3px 3px 0px white,
+                6px 6px 0px black;
+
+            transition: 0.3s;
+        }
+        header h1:hover {
+
+            transform: scale(1.03);
+
+            text-shadow:
+                3px 3px 0px white,
+                6px 6px 0px black,
+                0 0 25px #ff5c00;
+        }
+        header p {
+            font-size: 17px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            margin-top: 25px;
+        }
+        nav a {
+            display: inline-block;
+            background-color: #ff5c00;
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            margin: 5px;
+            border-radius: 25px;
+            border: 2px solid white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            background-color: white;
+            color: #ff5c00;
+            border-color: #ff5c00;
+            transform: translateY(-4px);
+            box-shadow:
+                0 0 10px #ff5c00,
+                0 0 20px #ff5c00;
+        }
+
+
+        /* MAIN */
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+
+        /* PRODUCT CARD */
+
+        .product-page {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 4px solid #171717;
+            box-shadow: 10px 10px 0px #ff5c00;
+            transition: 0.3s;
+        }
+        .product-page:hover {
+            box-shadow:
+                14px 16px 0px #ff5c00,
+                0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        /* PRODUCT TITLE */
+
+        .product-page h2 {
+            color: #ff5c00;
+            text-align: center;
+            font-size: 38px;
+            text-transform: uppercase;
+            margin-top: 0;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .product-page h2:hover {
+            transform: scale(1.03);
+            text-shadow:
+                0 0 5px #ff5c00,
+                0 0 15px #ff5c00,
+                0 0 25px #ff5c00;
+        }
+
+        /* PRODUCT IMAGE */
+        .product-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .product-image img {
+            width: 700px;
+            max-width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border: 5px solid #171717;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+        .product-image img:hover {
+            transform: scale(1.03);
+            border-color: #ff5c00;
+            box-shadow:
+                0 0 15px #ff5c00,
+                0 0 30px rgba(255,92,0,0.5);
+        }
+
+        /* DESCRIPTION */
+
+        .description {
+            line-height: 1.8;
+            text-align: justify;
+            font-size: 17px;
+        }
+        .description h3 {
+            color: #ff5c00;
+            font-size: 28px;
+        }
+
+        /* SMALL SPECIFICATIONS */
+
+        .specifications {
+            margin-top: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .specifications h3 {
+            color: #ff5c00;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        th,
+        td {
+            border: 1px solid #171717;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #171717;
+            color: #ff5c00;
+            width: 30%;
+        }
+        tr:hover td {
+            background-color: #fff1e6;
+        }
+        
+        /* EATURED WWE FIGURES */
+
+        .featured {
+            margin-top: 50px;
+        }
+        .featured h3 {
+            color: #ff5c00;
+            font-size: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow:
+                1px 1px 0px #171717;
+        }
+
+        /* FIGURE GRID */
+
+        .figure-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 20px;
+        }
+
+        /* INDIVIDUAL FIGURE BOX */
+
+        .figure-card {
+            background-color: #171717;
+            border: 3px solid #ff5c00;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: 0.4s;
+            box-shadow: 5px 5px 0px #ff5c00;
+        }
+
+
+        /* HOVER ANIMATION */
+
+        .figure-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow:
+                0 0 10px #ff5c00,
+                0 0 20px #ff5c00,
+                8px 8px 0px #ff5c00;
+        }
+
+
+        /* FIGURE IMAGE */
+
+        .figure-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background-color: white;
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        /* IMAGE HOVER */
+
+        .figure-card:hover img {
+            border-color: #ff5c00;
+            box-shadow:
+                0 0 10px #ff5c00;
+        }
+
+        /* FIGURE NAME */
+
+        .figure-card h4 {
+            color: #ff5c00;
+            font-size: 16px;
+            margin: 15px 0 5px;
+            transition: 0.3s;
+        }
+
+        /* NAME GLOW */
+
+        .figure-card:hover h4 {
+            text-shadow:
+                0 0 5px #ff5c00,
+                0 0 10px #ff5c00,
+                0 0 15px #ff5c00;
+        }
+
+        /* SMALL DESCRIPTION */
+
+        .figure-card p {
+            color: white;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        /* BACK BUTTON */
+
+        .back-button {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .back-button a {
+            display: inline-block;
+            background-color: #ff5c00;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: 2px solid #171717;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-button a:hover {
+            background-color: #171717;
+            color: #ff5c00;
+            border-color: #ff5c00;
+            transform: translateY(-4px);
+            box-shadow:
+                0 0 10px #ff5c00,
+                0 0 20px #ff5c00;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 70px;
+            background-color: #171717;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-top: 8px solid #ff5c00;
+        }
+        footer span {
+            color: #ff5c00;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Brent's Toy Collection</h1>
+
+        <p>
+            Your Next Favorite Find • Rare • Unique • Collectible
+        </p>
+
+        <nav>
+            <!-- ../ means go back to the main folder -->
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About Me</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- PRODUCT -->
+    <main>
+        <div class="product-page">
+            <h2>WWE Action Figures</h2>
+            <div class="product-image">
+                <img src="../wweactionfigures.jpg"
+                     alt="Collection of WWE action figures">
+            </div>
+
+            <div class="description">
+                <h3>About This Collection</h3>
+                <p>
+                    Step into the world of professional wrestling with
+                    our collection of WWE action figures. These collectibles
+                    are perfect for wrestling fans, longtime collectors,
+                    and anyone who grew up watching their favorite WWE
+                    Superstars compete inside the ring.
+                </p>
+                <p>
+                    Whether you display your figures, recreate memorable
+                    matches, or simply collect your favorite Superstars,
+                    WWE action figures are a fun addition to any toy
+                    collection.
+                </p>
+            </div>
+
+            <div class="specifications">
+                <h3>Product Specifications</h3>
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <td>WWE Action Figures</td>
+                    </tr>
+                    <tr>
+                        <th>Category</th>
+                        <td>Action Figures</td>
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        <td>Plastic</td>
+                    </tr>
+                    <tr>
+                        <th>Size</th>
+                        <td>Approximately 6–7 inches</td>
+                    </tr>
+                    <tr>
+                        <th>Theme</th>
+                        <td>WWE / Professional Wrestling</td>
+                    </tr>
+                    <tr>
+                        <th>Condition</th>
+                        <td>Collectible / Display Item</td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td>Contact seller for current price</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- FEATURED WWE FIGURES -->
+            <div class="featured">
+                <h3>Featured WWE Figures</h3>
+                <div class="figure-grid">
+
+                <!-- FIGURE 1 -->
+                <div class="figure-card">
+                    <img src="../edge.jpg"
+                        alt="The Rated R Superstar Edge action figure">
+                    <h4>
+                        The Rated R Superstar "Edge"
+                    </h4>
+                    <p>
+                        ₱2,000
+                    </p>
+                </div>
+
+                
+                <!-- FIGURE 2 -->
+                <div class="figure-card">
+                    <img src="../johncena.jpg"
+                        alt="Big Match John, John Cena action figure">
+                    <h4>
+                        "Big Match John" John Cena
+                    </h4>
+                    <p>
+                        ₱2,500
+                    </p>
+                </div>
+
+                
+                <!-- FIGURE 3 -->
+                <div class="figure-card">
+                    <img src="../randyorton.jpg"
+                        alt="The Viper Randy Orton action figure">
+                    <h4>
+                        "The Viper" Randy Orton
+                    </h4>
+                    <p>
+                        ₱2,300
+                    </p>
+                </div>
+
+                
+                <!-- FIGURE 4 -->
+                <div class="figure-card">
+                    <img src="../reymysterio.jpg"
+                        alt="Rey Mysterio action figure">
+                    <h4>
+                        Rey Mysterio
+                    </h4>
+                    <p>
+                        ₱2,300
+                    </p>
+                </div>
+
+                
+                <!-- FIGURE 5 -->
+                <div class="figure-card">
+                    <img src="../cmpunk.jpg"
+                        alt="Cm Punk action figure">
+                    <h4>
+                        Cm Punk
+                    </h4>
+                    <p>
+                        ₱2,500
+                    </p>
+                </div>
+            </div>
+        
+            <!-- BACK TO HOME -->
+            <div class="back-button">
+                <a href="../index.html">
+                    ← Back to Collection
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026
+            <span>
+                Brent's Toy Collection
+            </span>
+            • Built for Toy Lovers
+        </p>
+    </footer>
+</body>
+</html>
