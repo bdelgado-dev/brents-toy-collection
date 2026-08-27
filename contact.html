@@ -142,7 +142,6 @@
 
 
         /* FORM */
-
         label {
             display: block;
             margin-top: 18px;
@@ -178,6 +177,71 @@
             resize: vertical;
         }
 
+        /* CONTACT INFORMATION */
+
+        .contact-info {
+        margin-top: 45px;
+        }
+        .contact-info h3 {
+        color: #ff5c00;
+        text-align: center;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        }
+
+        /* THREE BOXES */
+
+        .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        }
+
+        /* INDIVIDUAL BOX */
+
+        .contact-box {
+        background-color: #171717;
+        color: white;
+        padding: 18px 10px;
+        text-align: center;
+        border: 3px solid #ff5c00;
+        border-radius: 12px;
+        box-shadow: 4px 4px 0px #ff5c00;
+        transition: 0.3s;
+        }
+
+        /* BOX HOVER */
+
+        .contact-box:hover {
+        transform: translateY(-6px);
+        box-shadow:
+            0 0 10px #ff5c00,
+            0 0 20px #ff5c00,
+            6px 6px 0px #ff5c00;
+        }
+
+        /* BOX TITLES */
+
+        .contact-box h4 {
+        color: #ff5c00;
+        margin: 5px 0 8px;
+        font-size: 16px;
+        transition: 0.3s;
+        }
+        .contact-box:hover h4 {
+        text-shadow:
+            0 0 5px #ff5c00,
+            0 0 10px #ff5c00;
+        }
+
+        /* BOX TEXT */
+
+        .contact-box p {
+        font-size: 12px;
+        margin: 5px 0;
+        line-height: 1.4;
+        }
 
         /* SEND MESSAGE BUTTON */
 
@@ -330,7 +394,36 @@
                         Send Message
                     </button>
                 </div>
-            </form>
+            </fo    rm>
+
+            <!-- GET IN TOUCH, ORIG CONTANT INFOO -->
+
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <div class="contact-grid">
+                    <div class="contact-box">
+                    <h4>Email</h4>
+                    <p>
+                        brentstoycollection@gmail.com
+                    </p>
+                </div>
+
+
+                <div class="contact-box">
+                    <h4>Contact Number</h4>
+                    <p>
+                        63+ 977 795 0639
+                    </p>
+                </div>
+
+                <div class="contact-box">
+                    <h4>Location</h4>
+                    <p>
+                        Mandaluyong City, Philippines
+                    </p>
+
+                </div>
+            </div>
         </div>
     </main>
 
