@@ -315,6 +315,135 @@
                 0 0 20px #ff5c00;
         }
 
+        /*ORDER ENQUIRY FORM*/
+
+        .order-section {
+            margin-top: 50px;
+            padding-top: 35px;
+            border-top: 4px solid #ff5c00;
+        }
+        .order-section h2 {
+            color: #ff5c00;
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+        .order-section h2:hover {
+            text-shadow:
+                0 0 5px #ff5c00,
+                0 0 15px #ff5c00,
+                0 0 25px #ff5c00;
+        }
+        .order-section > p {
+            margin-bottom: 25px;
+        }   
+
+        /* FORM */
+
+        .order-form {
+            text-align: left;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* FIELDSET */
+
+        .order-form fieldset {
+            border: 3px solid #171717;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            background-color: #fffaf2;
+        }
+        .order-form legend {
+            background-color: #171717;
+            color: #ff5c00;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* LABELS */
+
+        .order-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* NUMBER AND EMAIL */
+
+        .order-form input[type="number"],
+        .order-form input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #171717;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .order-form input[type="number"]:focus,
+        .order-form input[type="email"]:focus {
+            outline: none;
+            border-color: #ff5c00;
+            box-shadow:
+                0 0 5px #ff5c00,
+                0 0 12px rgba(255, 92, 0, 0.4);
+        }
+
+        /* RADIO BUTTONS */
+
+        .delivery-option {
+            margin: 12px 0;
+        }   
+
+        .delivery-option input {
+            margin-right: 8px;
+        }
+
+        /* CHECKBOXES */
+
+        .extra-option {
+            margin: 12px 0;
+        }
+        .extra-option input {
+            margin-right: 8px;
+        }
+
+        /* SEND BUTTON */
+
+        .order-button {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .order-button button {
+            background-color: #ff5c00;
+            color: white;
+            border: 3px solid #171717;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .order-button button:hover {
+            background-color: #171717;
+            color: #ff5c00;
+            border-color: #ff5c00;
+            transform: translateY(-4px);
+            box-shadow:
+                0 0 10px #ff5c00,
+                0 0 20px #ff5c00;
+        }
+        .order-button button:focus {
+            outline: 3px solid #ff5c00;
+            outline-offset: 4px;
+        }
+
         /* FOOTER */
 
         footer {
@@ -490,6 +619,158 @@
                 </a>
             </div>
         </div>
+
+
+            <!-- ORDER ENQUIRY -->
+            <section class="order-section">
+                <h2>Order Enquiry</h2>
+                <p>
+                    Interested in adding this WWE action figure to your collection?
+                    Fill out the form below to ask about ordering this product.
+                </p>
+                <form class="order-form">
+
+                    <!-- QUANTITY -->
+                    <fieldset>
+                        <legend>Order Details</legend>
+                        <label for="quantity">
+                            Quantity
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            name="quantity"
+                            min="1"
+                            max="20"
+                            required
+                         >
+
+                    </fieldset>
+
+                    <!-- DELIVERY METHOD -->
+                    <fieldset>
+                        <legend>Delivery Method</legend>
+                        <div class="delivery-option">
+
+                            <input
+                                type="radio"
+                                id="standard-delivery"
+                                name="delivery"
+                                value="standard"
+                                required
+                            >
+
+                            <label for="standard-delivery">
+                                Standard Delivery
+                            </label>
+
+                        </div>
+
+                        <div class="delivery-option">
+                            <input
+                                type="radio"
+                                id="express-delivery"
+                                name="delivery"
+                                value="express"
+                            >
+
+                            <label for="express-delivery">
+                                Express Delivery
+                            </label>
+
+                        </div>
+
+                        <div class="delivery-option">
+
+                            <input
+                                type="radio"
+                                id="store-pickup"
+                                name="delivery"
+                                value="pickup"
+                            >
+                            <label for="store-pickup">
+                                Store Pickup
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+
+                    <!-- OPTIONAL EXTRAS -->
+                    <fieldset>
+                        <legend>Optional Extras</legend>
+                        <div class="extra-option">
+                            <input
+                                type="checkbox"
+                                id="gift-wrap"
+                                name="extras"
+                                value="gift-wrap"
+                            >
+
+                            <label for="gift-wrap">
+                                Gift Wrapping
+                            </label>
+                        </div>
+
+                        <div class="extra-option">
+                            <input
+                                type="checkbox"
+                                id="express-handling"
+                                name="extras"
+                                value="express-handling"
+                            >
+
+                            <label for="express-handling">
+                                Express Handling
+                            </label>
+                        </div>
+
+                        <div class="extra-option">
+                            <input
+                                type="checkbox"
+                                id="collector-packaging"
+                                name="extras"
+                                value="collector-packaging"
+                            >
+
+                            <label for="collector-packaging">
+                                Collector Packaging
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+
+                    <!-- EMAIL -->
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="contact-email">
+                            Contact Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="contact-email"
+                            name="contact-email"
+                            required
+                        >       
+
+                    </fieldset>
+
+                    <!-- BUTTON -->
+                    <div class="order-button">
+
+                        <button type="submit">
+                            Send Order Enquiry
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
     </main>
 
     <!-- FOOTER -->
