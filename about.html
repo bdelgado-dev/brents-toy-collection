@@ -2,176 +2,38 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>About Me - Brent's Toy Collection</title>
-    <style>
 
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background-color: #f4ead5;
-            color: #222;
-        }
-
-        /*HEADER*/
-        header {
-            background-color: #171717;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 8px solid #ff5c00;
-        }
-        header h1 {
-            color: #ff5c00;
-            font-size: 45px;
-            margin: 10px 0;
-            text-transform: uppercase;
-            text-shadow:
-                3px 3px 0px white,
-                6px 6px 0px black;
-        }
-        header p {
-            font-size: 17px;
-        }
-
-        /*NAVIGATION LINKS*/
-        nav {
-            margin-top: 25px;
-        }
-        nav a {
-            display: inline-block;
-
-            background-color: #ff5c00;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 25px;
-            font-weight: bold;
-            border: 2px solid white;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background-color: white;
-            color: #ff5c00;
-            border-color: #ff5c00;
-            transform: translateY(-3px);
-            box-shadow: 0 0 15px #ff5c00;
-        }
-
-        /*MAIN*/
-        main {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 0 25px;
-        }
-
-        /*ABOUT CARD*/
-
-        .about-card {
-            display: flex;
-            align-items: center;
-            gap: 45px;
-            background-color: white;
-            padding: 35px;
-            border: 4px solid #171717;
-            border-radius: 20px;
-            box-shadow: 10px 10px 0px #ff5c00;
-        }
-
-        /*LEFT SIDE*/
-        .profile {
-            text-align: center;
-            width: 350px;
-            flex-shrink: 0;
-        }
-        .profile h2 {
-            color: #ff5c00;
-            font-size: 30px;
-            margin-bottom: 20px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .profile h2:hover {
-            color: #171717;
-            text-shadow:
-                0 0 5px #ff5c00,
-                0 0 15px #ff5c00;
-            transform: scale(1.05);
-        }
-        .profile img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border: 5px solid #171717;
-            border-radius: 15px;
-            transition: 0.4s;
-        }
-        .profile img:hover {
-            transform: scale(1.05);
-            border-color: #ff5c00;
-            box-shadow:
-                0 0 15px #ff5c00,
-                0 0 30px rgba(255, 92, 0, 0.5);
-        }
-
-        /*RIGHT SIDE*/
-        .information {
-            flex: 1;
-            border-left: 5px solid #ff5c00;
-            padding-left: 30px;
-        }
-        .information h2 {
-            font-size: 30px;
-            margin-top: 0;
-        }
-        .information p {
-            line-height: 1.7;
-            text-align: justify;
-        }
-        .details {
-            background-color: #171717;
-            color: white;
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-        .details strong {
-            color: #ff5c00;
-        }
-
-        /*FOOTER*/
-        footer {
-            margin-top: 70px;
-            background-color: #171717;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            border-top: 8px solid #ff5c00;
-        }
-        footer span {
-            color: #ff5c00;
-            font-weight: bold;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
         <h1>Brent's Toy Collection</h1>
-        <p>Your Ultimate Destination for Collectible Toys • Rare • Unique • Collectible</p>
-        <!-- NAVIGATION LINKS-->
+        <p>
+            Your Ultimate Destination for Collectible Toys
+            <br>
+            Rare • Unique • Collectible
+        </p>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="contact.html">Contact</a>
+        <!-- NAVIGATION LINKS-->
+       <nav>
+            <ul>
+               <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../about.html">About</a>
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a>
+                </li>
+            </ul>
         </nav>
     </header>
 
