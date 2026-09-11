@@ -35,17 +35,25 @@ body {
 
 /* HEADER */
 
-header {
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--dark-ink);
     color: var(--white);
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom: 8px solid var(--brand-orange);
+    padding: 40px 50px;
+    border-bottom: 8px solid var(--brand);
     position: relative;
     overflow: hidden;
 }
-header h1 {
-    color: var(--brand-orange);
+
+/* SHOP NAME */
+
+.header-brand {
+    text-align: left;
+}
+.site-header h1 {
+    color: var(--brand);
     font-size: 45px;
     margin: 10px 0;
     text-transform: uppercase;
@@ -53,23 +61,58 @@ header h1 {
     text-shadow:
         3px 3px 0 var(--white),
         6px 6px 0 var(--dark-ink);
-
     transition: 0.3s;
     cursor: pointer;
 }
-header h1:hover {
+.site-header h1:hover {
     transform: scale(1.03);
-
     text-shadow:
         3px 3px 0 var(--white),
         6px 6px 0 var(--dark-ink),
-        0 0 25px var(--brand-orange);
+        0 0 25px var(--brand);
 }
-header p {
+.site-header p {
     font-size: 17px;
     color: var(--white);
+    margin: 0;
 }
 
+
+/* NAVIGATION */
+
+.site-header nav {
+    margin-top: 0;
+}
+.site-header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.site-header nav li {
+    /* Flexbox controls the layout */
+}
+.site-header nav a {
+    display: block;
+    background-color: var(--brand);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: 2px solid var(--white);
+    font-weight: bold;
+    transition: 0.3s;
+}
+.site-header nav a:hover {
+    background-color: var(--white);
+    color: var(--brand);
+    border-color: var(--brand);
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 10px var(--brand),
+        0 0 20px var(--brand);
+}
 
 /* NAVIGATION */
 
@@ -254,6 +297,12 @@ main {
 /* BOTTOM MESSAGE */
 
 .bottom-message {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     margin-top: 60px;
     background-color: var(--dark-ink);
     color: var(--white);
