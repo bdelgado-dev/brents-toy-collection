@@ -1,18 +1,15 @@
-/* VARIABLES*/
+/* VARIABLES */
 
 :root {
     --brand: #ff5c00;
     --brand-orange: #ff5c00;
-
     --dark-ink: #171717;
     --muted-grey: #666666;
     --light-background: #f4ead5;
-
     --white: #ffffff;
     --light-cream: #fffaf2;
     --light-orange: #fff1e6;
 
-    /* Used for transparent orange effects */
     --brand-orange-rgb: 255, 92, 0;
 }
 
@@ -77,7 +74,6 @@ body {
     margin: 0;
 }
 
-
 /* NAVIGATION */
 
 .site-header nav {
@@ -89,9 +85,6 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-.site-header nav li {
-    /* Flexbox controls the layout */
 }
 .site-header nav a {
     display: block;
@@ -114,42 +107,6 @@ body {
         0 0 20px var(--brand);
 }
 
-/* NAVIGATION */
-
-nav {
-    margin-top: 25px;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-nav li {
-    display: inline-block;
-}
-nav a {
-    display: inline-block;
-    background-color: var(--brand-orange);
-    color: var(--white);
-    text-decoration: none;
-    padding: 10px 22px;
-    margin: 5px;
-    border-radius: 25px;
-    border: 2px solid var(--white);
-    font-weight: bold;
-    transition: 0.3s;
-}
-nav a:hover {
-    background-color: var(--white);
-    color: var(--brand-orange);
-    border-color: var(--brand-orange);
-    transform: translateY(-4px);
-    box-shadow:
-        0 0 10px var(--brand-orange),
-        0 0 20px var(--brand-orange);
-}
-
-
 /* MAIN LAYOUT */
 
 main {
@@ -157,7 +114,6 @@ main {
     margin: 50px auto;
     padding: 0 25px;
 }
-
 
 /* HOME PAGE / INDEX */
 
@@ -181,7 +137,6 @@ main {
 }
 .section-title h2 {
     display: inline-block;
-
     background-color: var(--brand-orange);
     color: var(--white);
     padding: 12px 30px;
@@ -194,20 +149,26 @@ main {
 }
 .section-title h2:hover {
     transform: translateY(-5px);
-    box-shadow:
-        8px 10px 0 var(--dark-ink);
+    box-shadow: 8px 10px 0 var(--dark-ink);
 }
 
-/* TOY / PRODUCT GRID */
+/* TOY GRID */
 
-.toy-grid,
-.product-grid {
+.toy-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
 }
 
-/* TOY CARD */
+/* PRODUCT GRID */
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* TOY / PRODUCT CARDS */
 
 .toy-card,
 .product-card {
@@ -219,6 +180,15 @@ main {
     transition: 0.35s;
     position: relative;
 }
+
+/* REQUIRED FLEXBOX SIZE */
+
+.product-card {
+    flex: 1 1 240px;
+}
+
+/* CARD HOVER */
+
 .toy-card:hover,
 .product-card:hover {
     transform: translateY(-10px) rotate(-1deg);
@@ -243,16 +213,6 @@ main {
     border-radius: 5px;
     letter-spacing: 1px;
     z-index: 2;
-}
-
-/* CARD HOVER */
-
-.toy-card:hover,
-.product-card:hover {
-    transform: translateY(-10px) rotate(-1deg);
-    box-shadow:
-        12px 15px 0 var(--brand-orange),
-        0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* TOY / PRODUCT TITLES */
@@ -294,6 +254,7 @@ main {
         0 0 20px rgba(var(--brand-orange-rgb), 0.5);
 }
 
+
 /* BOTTOM MESSAGE */
 
 .bottom-message {
@@ -302,7 +263,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     margin-top: 60px;
     background-color: var(--dark-ink);
     color: var(--white);
@@ -341,6 +301,7 @@ main {
 }
 
 /* LEFT SIDE */
+
 .profile {
     text-align: center;
     width: 350px;
@@ -385,12 +346,10 @@ main {
 }
 .information h2 {
     font-size: 30px;
-
     margin-top: 0;
 }
 .information p {
     line-height: 1.7;
-
     text-align: justify;
 }
 .details {
@@ -463,7 +422,6 @@ label {
     font-weight: bold;
     color: var(--dark-ink);
 }
-
 input,
 select,
 textarea {
@@ -478,14 +436,12 @@ textarea {
     color: var(--dark-ink);
     background-color: var(--white);
 }
-
 input:focus,
 select:focus,
 textarea:focus {
     outline: 3px solid var(--brand);
     outline-offset: 2px;
 }
-
 textarea {
     min-height: 160px;
     resize: vertical;
@@ -504,7 +460,6 @@ textarea {
     margin-bottom: 20px;
 }
 
-
 /* THREE BOXES */
 
 .contact-grid {
@@ -512,7 +467,6 @@ textarea {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
-
 
 /* INDIVIDUAL BOX */
 
@@ -568,7 +522,6 @@ input[type="submit"] {
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 button:hover,
 input[type="submit"]:hover {
     transform: translateY(-2px);
@@ -591,7 +544,6 @@ input[type="submit"]:hover {
         0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-
 /* PRODUCT TITLE */
 
 .product-page h2 {
@@ -610,7 +562,6 @@ input[type="submit"]:hover {
         0 0 15px var(--brand-orange),
         0 0 25px var(--brand-orange);
 }
-
 
 /* PRODUCT IMAGE */
 
@@ -680,7 +631,6 @@ input[type="submit"]:hover {
     background-color: var(--light-orange);
 }
 
-
 /* FEATURED WWE FIGURES */
 
 .featured {
@@ -705,7 +655,6 @@ input[type="submit"]:hover {
     margin-top: 20px;
 }
 
-
 /* FIGURE CARDS */
 
 .figure-card {
@@ -717,7 +666,6 @@ input[type="submit"]:hover {
     transition: 0.4s;
     box-shadow: 5px 5px 0 var(--brand-orange);
 }
-
 .figure-card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow:
@@ -725,7 +673,6 @@ input[type="submit"]:hover {
         0 0 20px var(--brand-orange),
         8px 8px 0 var(--brand-orange);
 }
-
 
 /* FIGURE IMAGE */
 
@@ -744,7 +691,6 @@ input[type="submit"]:hover {
         0 0 10px var(--brand-orange);
 }
 
-
 /* FIGURE NAME */
 
 .figure-card h4 {
@@ -759,7 +705,6 @@ input[type="submit"]:hover {
         0 0 10px var(--brand-orange),
         0 0 15px var(--brand-orange);
 }
-
 
 /* FIGURE DESCRIPTION */
 
@@ -828,7 +773,6 @@ input[type="submit"]:hover {
     margin: auto;
 }
 
-
 /* FIELDSET */
 
 .order-form fieldset {
@@ -838,7 +782,6 @@ input[type="submit"]:hover {
     margin-bottom: 25px;
     background-color: var(--light-cream);
 }
-
 .order-form legend {
     background-color: var(--dark-ink);
     color: var(--brand-orange);
@@ -886,7 +829,6 @@ input[type="submit"]:hover {
     gap: 8px;
     margin: 12px 0;
 }
-
 .delivery-option input[type="radio"] {
     width: auto;
     padding: 0;
@@ -894,7 +836,6 @@ input[type="submit"]:hover {
     flex-shrink: 0;
     accent-color: var(--brand-orange);
 }
-
 .delivery-option label {
     display: inline;
     margin: 0;
@@ -902,7 +843,6 @@ input[type="submit"]:hover {
     font-weight: bold;
     color: var(--dark-ink);
 }
-
 
 /* CHECKBOXES */
 
@@ -912,7 +852,6 @@ input[type="submit"]:hover {
     gap: 8px;
     margin: 12px 0;
 }
-
 .extra-option input[type="checkbox"] {
     width: auto;
     padding: 0;
@@ -920,7 +859,6 @@ input[type="submit"]:hover {
     flex-shrink: 0;
     accent-color: var(--brand-orange);
 }
-
 .extra-option label {
     display: inline;
     margin: 0;
@@ -959,7 +897,6 @@ input[type="submit"]:hover {
     outline: 3px solid var(--brand);
     outline-offset: 4px;
 }
-
 
 /* FOOTER */
 
