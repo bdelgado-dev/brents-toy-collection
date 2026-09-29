@@ -28,6 +28,30 @@ body {
     background-color: var(--light-background);
     color: var(--dark-ink);
     line-height: 1.6;
+
+    /* SEKELETON*/
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side     main"
+        "foot     foot";
+    gap: 16px;
+}
+
+/* PAGE REGIONS */
+
+header {
+    grid-area: masthead;
+}
+aside {
+    grid-area: side;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: foot;
 }
 
 /* HEADER */
@@ -43,6 +67,29 @@ body {
     position: relative;
     overflow: hidden;
     animation: headerDrop 0.7s ease-out;
+}
+
+/* SIDEBAR */
+
+.shop-sidebar {
+    grid-area: side;
+    background-color: var(--dark-ink);
+    color: var(--white);
+    padding: 20px;
+    border: 3px solid var(--brand-orange);
+    border-radius: 15px;
+    align-self: start;
+    margin: 20px 0 20px 20px;
+}
+.shop-sidebar h2,
+.shop-sidebar h3 {
+    color: var(--brand-orange);
+}
+.shop-sidebar ul {
+    padding-left: 20px;
+}
+.shop-sidebar li {
+    margin-bottom: 8px;
 }
 
 /* SHOP NAME */
@@ -111,6 +158,7 @@ body {
 /* MAIN LAYOUT */
 
 main {
+    grid-area: main;
     max-width: 1100px;
     margin: 50px auto;
     padding: 0 25px;
@@ -156,9 +204,12 @@ main {
 /* TOY GRID */
 
 .toy-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 35px;
+}
+.toy-card {
+    flex: 1 1 350px;
 }
 
 /* PRODUCT GRID */
