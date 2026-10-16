@@ -29,7 +29,7 @@ if (copyrightElement) {
         `© ${currentYear} ${shopName} • Built for Toy Lovers`;
 }
 
-// 1. STOCK STATUS
+// STOCK STATUS
 const stockCount = 5;
 let stockMessage;
 
@@ -49,7 +49,7 @@ if (stockStatusElement) {
     stockStatusElement.textContent = stockMessage;
 }
 
-// 2. FREE DELIVERY CHECK
+// FREE DELIVERY CHECK
 const orderTotal = 1200;
 const isMember = true;
 
@@ -70,7 +70,7 @@ if (finalTotalElement) {
     finalTotalElement.textContent = finalTotal;
 }
 
-// 3. SHOP OPEN OR CLOSED
+// SHOP OPEN OR CLOSED
 const isShopOpen = true;
 
 const shopMessage = isShopOpen ? "Open today" : "Closed today";
