@@ -15,7 +15,7 @@
     <!--HEADER-->
     <header class="site-header">
         <div class="header-brand">
-            <h1>Brent's Toy Collection</h1>
+            <h1 id="shop-name">Brent's Toy Collection</h1>
             <p>
                  Your Ultimate Destination for Collectible Toys
             <br>
@@ -67,12 +67,16 @@
             something worth adding to the collection.
         </p>
 
+        <p>
+            Products in this section:
+            <span id="product-count">0</span>
+        </p>
 
         <!-- TOY GRID FOR COLLECTIBLES -->
-        <section class="toy-grid">
+        <section class="toy-grid ">
 
             <!-- WWE -->
-            <div class="toy-card">
+            <div class="toy-card product-card">
                 <h3>WWE Action Figures</h3>
                 <img src="wweactionfigures.jpg"
                 alt="WWE action figures">
@@ -89,21 +93,21 @@
             </div>
 
             <!-- ANIME -->
-            <div class="toy-card">
+            <div class="toy-card product-card">
                 <h3>Anime & Vintage Toys</h3>
                 <img src="animecartoontoys.jpg"
                      alt="Anime, cartoon and vintage toys">
             </div>
 
             <!-- SPORTS -->
-            <div class="toy-card">
+            <div class="toy-card product-card">
                 <h3>Sports Memorabilia</h3>
                 <img src="sportsmemorabilia.png"
                      alt="Sports memorabilia">
             </div>
 
             <!-- FUNKO POP FIGURES -->
-            <div class="toy-card">
+            <div class="toy-card product-card">
                 <h3>Funko Pop! Figures</h3>
                 <img src="funkopopfigures.jpg"
                      alt="Funko Pop figures">
@@ -125,10 +129,11 @@
 
     <!--FOOTER-->
     <footer>
-        <p>
-            © 2026 <span>Brent's Toy Collection</span>
-            • Built for Toy Lovers
+        <p id="copyright">
+            © 2026 Brent's Toy Collection • Built for Toy Lovers
         </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
